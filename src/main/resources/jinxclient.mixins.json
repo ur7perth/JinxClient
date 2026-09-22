@@ -8,7 +8,7 @@
     "ItemRendererMixin",
     "InGameHudMixin",
     "ItemEntityRendererMixin",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
     "ChatHudMixin"
   ],
   "injectors": {
