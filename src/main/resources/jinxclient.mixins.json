@@ -4,8 +4,7 @@
   "package": "com.abo9kr.jinxclient.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "HeldItemOptionsMixin",
-    "GameRendererMixin",
+    "GameOptionsMixin",
     "ItemRendererMixin",
     "InGameHudMixin",
     "ItemEntityRendererMixin",
