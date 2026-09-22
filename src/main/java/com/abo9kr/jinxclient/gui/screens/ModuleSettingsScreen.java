@@ -12,11 +12,6 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.SliderWidget;
 import net.minecraft.text.Text;
 
-/**
- * Popup screen listing every Setting belonging to one Module, opened by right-clicking
- * that module in the main JinxScreen. Rebuilt whenever a setting's visibility could have
- * changed (e.g. toggling "Custom Color" shows/hides the Color picker underneath it).
- */
 public class ModuleSettingsScreen extends Screen {
     private final Screen parent;
     private final Module module;
@@ -110,7 +105,7 @@ public class ModuleSettingsScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        this.renderBackground(context);
         context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 16, 0xFFFFFFFF);
         super.render(context, mouseX, mouseY, delta);
     }
