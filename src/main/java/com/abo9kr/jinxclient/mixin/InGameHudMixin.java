@@ -83,11 +83,4 @@ public class InGameHudMixin {
             ci.cancel();
         }
     }
-
-    @Inject(method = "renderChat", at = @At("HEAD"), cancellable = true)
-    private void jinx$hideChat(DrawContext context, int tickDelta, CallbackInfo ci) {
-        if (ModuleManager.get(ChatToggle.class).isChatHidden()) {
-            ci.cancel();
-        }
-    }
 }
