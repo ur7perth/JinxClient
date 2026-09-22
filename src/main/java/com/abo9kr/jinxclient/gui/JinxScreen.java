@@ -69,7 +69,7 @@ public class JinxScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        this.renderBackground(context);
 
         // Sidebar background
         context.fill(0, 0, SIDEBAR_WIDTH, this.height, 0xCC101014);
