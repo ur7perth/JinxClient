@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.abo9kr.jinxclient.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "HeldItemRendererMixin",
+    "GameRendererMixin",
+    "ItemRendererMixin",
+    "InGameHudMixin",
+    "ItemEntityRendererMixin",
+    "TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
