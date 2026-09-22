@@ -8,11 +8,6 @@ import net.minecraft.client.gui.widget.SliderWidget;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.text.Text;
 
-/**
- * Fully custom color picker: independent A/R/G/B sliders (0-255 each) plus a hex text
- * field, so the user is never limited to a fixed palette - any color/opacity combination
- * is possible.
- */
 public class ColorPickerScreen extends Screen {
     private final Screen parent;
     private final ColorSetting setting;
@@ -72,10 +67,9 @@ public class ColorPickerScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        this.renderBackground(context);
         context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 16, 0xFFFFFFFF);
 
-        // Preview swatch
         int swatchSize = 20;
         int sx = this.width - swatchSize - 20;
         int sy = 16;
