@@ -52,7 +52,7 @@ public class JinxScreen extends Screen {
             this.addDrawableChild(ButtonWidget.builder(Text.literal("Export"), b -> {
                         String code = ConfigManager.exportCode();
                         configField.setText(code);
-                        configField.setCursorToStart(false);
+                        configField.setCursorToStart();
                         configStatus = Text.literal("Exported! Code copied into the box above - copy it out.");
                     })
                     .dimensions(fieldX, fieldY + 30, 100, 20).build());
