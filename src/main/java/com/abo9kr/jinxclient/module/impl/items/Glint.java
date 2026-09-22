@@ -9,8 +9,7 @@ import com.abo9kr.jinxclient.module.settings.NumberSetting;
 public class Glint extends Module {
 
     public final BooleanSetting useCustomColor = registerToggle("Custom Color", true);
-    public final ColorSetting color = register(new ColorSetting("Color", 0xFFDA70D6))
-            .visibleIf(() -> useCustomColor.get());
+    public final ColorSetting color = register(new ColorSetting("Color", 0xFFDA70D6));
     public final BooleanSetting fx = registerToggle("Fx (rainbow)", false);
 
     public final NumberSetting itemStrength = register(new NumberSetting("Item Strength", 5, 0, 10, 1));
@@ -21,6 +20,7 @@ public class Glint extends Module {
     public Glint() {
         super("Glint", Category.ITEMS,
                 "Custom color / strength / speed for the enchantment glint on items and armor.");
+        color.visibleIf(() -> useCustomColor.get());
     }
 
     public float[] getCurrentColor(long timeMillis) {
